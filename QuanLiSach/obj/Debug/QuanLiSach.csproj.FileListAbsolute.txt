@@ -7,3 +7,11 @@ c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\obj\Debug\Q
 c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\obj\Debug\QuanLiSach.csproj.GenerateResource.Cache
 c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\obj\Debug\QuanLiSach.exe
 c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\obj\Debug\QuanLiSach.pdb
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QuanLiSach.exe.config
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.exe
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.pdb
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QuanLiSach.exe
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QuanLiSach.pdb
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Properties.Resources.resources
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.csproj.GenerateResource.Cache
