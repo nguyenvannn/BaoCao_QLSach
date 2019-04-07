@@ -1,0 +1,5 @@
+c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\bin\Debug\DAO.dll
+c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\bin\Debug\DAO.pdb
+c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\DAO\obj\Debug\DAO.dll
+c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\DAO\obj\Debug\DAO.pdb
