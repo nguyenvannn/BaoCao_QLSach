@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLiSach
 {
-    public partial class Form1 : Form
+    public partial class Form_KhachHang : Form
     {
-        public Form1()
+        public Form_KhachHang()
         {
             InitializeComponent();
         }

@@ -5,6 +5,5 @@ c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\DTO\obj\Deb
 c:\users\van nguyen\documents\visual studio 2015\Projects\QuanLiSach\DTO\obj\Debug\DTO.pdb
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\bin\Debug\DTO.dll
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\bin\Debug\DTO.pdb
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\DTO\obj\Debug\DTO.dll
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\DTO\obj\Debug\DTO.pdb

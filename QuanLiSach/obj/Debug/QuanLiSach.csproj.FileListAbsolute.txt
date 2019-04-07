@@ -15,3 +15,4 @@ C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QuanLiSach.pdb
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.csprojResolveAssemblyReference.cache
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Properties.Resources.resources
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.csproj.GenerateResource.Cache
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Form_DangNhap.resources
