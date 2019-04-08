@@ -8,7 +8,7 @@ using DAO;
 
 namespace BUS
 {
-    class BUS_KhachHang
+    public class BUS_KhachHang
     {
         DAO_KhachHang emp = new DAO_KhachHang();
         public List<DTO_KhachHang> GetData(string sql)
