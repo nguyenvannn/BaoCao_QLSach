@@ -100,7 +100,21 @@ namespace DAO
         }
         public int Update(string maKH, string hotenKH, string diachi, string dienthoai, string email)
         {
-
+            try
+            {
+                data.Connect();
+                string sql = "UPDATE KhachHang set HotenKH =N'" + hotenKH + "', Diachi=N'" + diachi + "', DienThoai =N'" + dienthoai + "', Email =N'" + email + "' WHERE MaKH =" + maKH;
+                int numberRow = data.ExecuteNonQuery(sql);
+                return numberRow;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         public int Search(string maKH)
         {
