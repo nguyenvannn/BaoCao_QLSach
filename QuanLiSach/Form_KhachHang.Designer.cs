@@ -140,6 +140,7 @@
             this.btSua.TabIndex = 2;
             this.btSua.Text = "Update";
             this.btSua.UseVisualStyleBackColor = false;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btXoa
             // 

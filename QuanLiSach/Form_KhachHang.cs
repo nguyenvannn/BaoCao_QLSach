@@ -111,5 +111,27 @@ namespace QuanLiSach
             LoadKhachHang();
             MessageBox.Show("Ban da xoa thanh cong!");
         }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string maKH = txtMaKH.Text.Trim();
+                string hotenKH = txtHoten.Text.Trim();
+                string diachi = txtDiachi.Text.Trim();
+                string dienthoai = txtDienthoai.Text.Trim();
+                string email = txtEmail.Text.Trim();
+
+                emp.Update(maKH, hotenKH, diachi, dienthoai, email);
+                LoadKhachHang();
+                MessageBox.Show("Ban da Update thanh cong !!");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Loi!" + ex.Message);
+            }
+        }
     }
 }
