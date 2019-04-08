@@ -149,5 +149,16 @@ namespace QuanLiSach
             txtDienthoai.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
             txtEmail.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btSanPham_Click(object sender, EventArgs e)
+        {
+            Form_SanPham formSP = new Form_SanPham();
+            formSP.ShowDialog();
+        }
     }
 }

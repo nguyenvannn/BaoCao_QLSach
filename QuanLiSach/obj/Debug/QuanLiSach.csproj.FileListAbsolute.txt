@@ -17,3 +17,4 @@ C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Proper
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.csproj.GenerateResource.Cache
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Form_DangNhap.resources
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Form_KhachHang.resources
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\obj\Debug\QuanLiSach.Form_SanPham.resources

@@ -119,6 +119,7 @@
             this.btThoat.TabIndex = 2;
             this.btThoat.Text = "Exit";
             this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btTimKiem
             // 
@@ -279,6 +280,7 @@
             this.btSanPham.TabIndex = 3;
             this.btSanPham.Text = "SẢN PHẨM";
             this.btSanPham.UseVisualStyleBackColor = false;
+            this.btSanPham.Click += new System.EventHandler(this.btSanPham_Click);
             // 
             // Column1
             // 
