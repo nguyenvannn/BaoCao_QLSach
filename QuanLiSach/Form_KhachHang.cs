@@ -96,5 +96,20 @@ namespace QuanLiSach
                 }
             }
         }
+
+        private void Form_KhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            string MaKH = txtMaKH.Text.Trim();
+            emp.Delete1(MaKH);
+            LoadKhachHang();
+            MessageBox.Show("Ban da xoa thanh cong!");
+        }
     }
 }

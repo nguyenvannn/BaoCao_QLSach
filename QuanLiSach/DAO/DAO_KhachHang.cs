@@ -73,6 +73,13 @@ namespace DAO
                 Disconnect();
             }
         }
+        public int Delete1(string maKH)
+        {
+            data.Connect();
+            string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
+            int numberOff = data.ExecuteNonQuery(sql);
+            return numberOff;
+        }
         public int Delete(string maKH)
         {
             Connect();
@@ -93,11 +100,11 @@ namespace DAO
         }
         public int Update(string maKH, string hotenKH, string diachi, string dienthoai, string email)
         {
-            
+
         }
         public int Search(string maKH)
         {
-            
+
         }
     }
 }

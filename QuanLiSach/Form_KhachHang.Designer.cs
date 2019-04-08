@@ -151,6 +151,7 @@
             this.btXoa.TabIndex = 2;
             this.btXoa.Text = "Delete";
             this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btThem
             // 
@@ -329,6 +330,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form_KhachHang";
             this.Text = "Form_KhachHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_KhachHang_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.panel2.ResumeLayout(false);
