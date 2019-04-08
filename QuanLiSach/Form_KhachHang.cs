@@ -31,5 +31,26 @@ namespace QuanLiSach
             dgvKhachHang.DataSource = emp.GetData(sql);
 
         }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string MaKH = txtMaKH.Text.Trim();
+                string HotenKH = txtHoten.Text.Trim();
+                string Diachi = txtDiachi.Text.Trim();
+                string Dienthoai = txtDienthoai.Text.Trim();
+                string Email = txtEmail.Text.Trim();
+
+                emp.Insert(MaKH, HotenKH, Diachi, Dienthoai, Email);
+                LoadKhachHang();
+                MessageBox.Show("Thanh cong");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Loi!" + ex.Message);
+            }
+        }
     }
 }

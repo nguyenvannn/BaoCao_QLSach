@@ -157,6 +157,7 @@
             this.btThem.TabIndex = 2;
             this.btThem.Text = "Insert";
             this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // txtEmail
             // 
@@ -285,13 +286,13 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "DiaChi";
-            this.Column3.HeaderText = "Địa Chỉ";
+            this.Column3.HeaderText = "Địa chỉ";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "DienThoai";
-            this.Column4.HeaderText = "Số Điện Thoại";
+            this.Column4.HeaderText = "Điện thoại";
             this.Column4.Name = "Column4";
             // 
             // Column5
