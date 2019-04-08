@@ -10,7 +10,7 @@ using System.Data;
 
 namespace DAO
 {
-    public class DAO_KhachHang: Dataprovider
+    public class DAO_KhachHang : Dataprovider
     {
         Dataprovider data = new Dataprovider();
         public List<DTO_KhachHang> GetData(string sql)
@@ -72,6 +72,15 @@ namespace DAO
             {
                 Disconnect();
             }
+        }
+        public int Delete1(string maKH)
+        {
+        }
+        public int Update(string maKH, string hotenKH, string diachi, string dienthoai, string email)
+        {
+        }
+        public int Search(string maKH)
+        {
         }
     }
 }

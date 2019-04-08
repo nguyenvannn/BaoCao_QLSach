@@ -21,5 +21,17 @@ namespace BUS
         {
             return emp.Insert(maKH, hotenKH, diachi, sdt, email);
         }
+        public int Delete1(string maKH)
+        {
+            return emp.Delete1(maKH);
+        }
+        public void Update(string maKH, string hotenKH, string diachi, string sdt, string email)
+        {
+            emp.Update(maKH, hotenKH, diachi, sdt, email);
+        }
+        public int Search(string maKH)
+        {
+            return emp.Search(maKH);
+        }
     }
 }
