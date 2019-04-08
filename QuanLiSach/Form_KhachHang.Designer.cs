@@ -129,6 +129,7 @@
             this.btTimKiem.TabIndex = 2;
             this.btTimKiem.Text = "Search";
             this.btTimKiem.UseVisualStyleBackColor = false;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // btSua
             // 

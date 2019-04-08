@@ -133,5 +133,11 @@ namespace QuanLiSach
                 MessageBox.Show("Loi!" + ex.Message);
             }
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT *FROM KhachHang WHERE MaKH Like'" + txtMaKH.Text + "%'";
+            dgvKhachHang.DataSource = emp.GetData(sql);
+        }
     }
 }
