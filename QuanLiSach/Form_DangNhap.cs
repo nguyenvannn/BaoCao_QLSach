@@ -25,8 +25,15 @@ namespace QuanLiSach
                 MessageBox.Show(" Đăng nhập thành công ");
             else
             {
-                MessageBox.Show("Sai mật khẩu hoặc tài khoản");
-                this.Close();
+                if (txtUser.Text == "admin" && txtPassword.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu");
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Sai mật khẩu hoặc tài khoản không tồn tại");
+                }
             }
             Form_KhachHang formKH = new Form_KhachHang();
             formKH.ShowDialog();
