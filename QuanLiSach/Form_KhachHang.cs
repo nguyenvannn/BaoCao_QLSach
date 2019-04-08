@@ -139,5 +139,15 @@ namespace QuanLiSach
             string sql = "SELECT *FROM KhachHang WHERE MaKH Like'" + txtMaKH.Text + "%'";
             dgvKhachHang.DataSource = emp.GetData(sql);
         }
+
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            txtMaKH.Text = dgvKhachHang.Rows[row].Cells[0].Value.ToString();
+            txtHoten.Text = dgvKhachHang.Rows[row].Cells[1].Value.ToString();
+            txtDiachi.Text = dgvKhachHang.Rows[row].Cells[2].Value.ToString();
+            txtDienthoai.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
+            txtEmail.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
+        }
     }
 }
