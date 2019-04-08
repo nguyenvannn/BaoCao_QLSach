@@ -52,5 +52,48 @@ namespace QuanLiSach
                 MessageBox.Show("Loi!" + ex.Message);
             }
         }
+
+        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn && dgvKhachHang.Columns[col].Name == "Del")
+            {
+                int row = e.RowIndex;
+                string maKH = dgvKhachHang.Rows[row].Cells["MaKH"].Value.ToString();
+                try
+                {
+                    int numOfRows = emp.Delete1(maKH);
+                    if (numOfRows > 0)
+                    {
+                        LoadKhachHang();
+                        MessageBox.Show("Bạn đã xóa khách hàng [" + maKH + "]");
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi xóa dữ liệu\n" + ex.Message);
+                }
+            }
+            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn && dgvKhachHang.Columns[col].Name == "Sua")
+            {
+                int row = e.ColumnIndex;
+                string maKH = dgvKhachHang.Rows[row].Cells["MaKH"].Value.ToString();
+                string hotenKH = dgvKhachHang.Rows[row].Cells["HotenKH"].Value.ToString();
+                string diachi = dgvKhachHang.Rows[row].Cells["Diachi"].Value.ToString();
+                string dienthoai = dgvKhachHang.Rows[row].Cells["DienThoai"].Value.ToString();
+                string email = dgvKhachHang.Rows[row].Cells["Email"].Value.ToString();
+                try
+                {
+                    emp.Update(maKH, hotenKH, diachi, dienthoai, email);
+                    LoadKhachHang();
+                    MessageBox.Show("Ban da update thanh cong!!");
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi!!" + ex.Message);
+                }
+            }
     }
 }
