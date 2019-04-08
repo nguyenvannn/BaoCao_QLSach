@@ -118,7 +118,21 @@ namespace DAO
         }
         public int Search(string maKH)
         {
-
+            Connect();
+            string str = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
+            SqlConnection con = new SqlConnection(str);
+            try
+            {
+                string sqlSearch = "IF EXISTS(SELECT FROM KhachHang WHERE MaKH='" + maKH.ToString() + "') BEGIN SELECT MaKH FROM KhachHang WHERE MaKH='" + maKH.ToString() + "'END";
+                SqlCommand cmd = new SqlCommand(sqlSearch, con);
+                con.Open();
+                int numberOfSearch = cmd.ExecuteNonQuery();
+                return numberOfSearch;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
         }
     }
 }
