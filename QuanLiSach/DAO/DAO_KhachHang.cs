@@ -73,14 +73,31 @@ namespace DAO
                 Disconnect();
             }
         }
-        public int Delete1(string maKH)
+        public int Delete(string maKH)
         {
+            Connect();
+            try
+            {
+                string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
+                int numberOfRows = ExecuteNonQuery(sql);
+                return numberOfRows;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         public int Update(string maKH, string hotenKH, string diachi, string dienthoai, string email)
         {
+            
         }
         public int Search(string maKH)
         {
+            
         }
     }
 }
