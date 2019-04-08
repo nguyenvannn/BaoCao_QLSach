@@ -30,7 +30,6 @@ namespace QuanLiSach
             string sql = "SELECT *FROM KhachHang";
             dgvKhachHang.DataSource = emp.GetData(sql);
 
-
         }
     }
 }

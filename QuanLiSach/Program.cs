@@ -16,7 +16,8 @@ namespace QuanLiSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_DangNhap());
+            //Application.Run(new Form_DangNhap());
+            Application.Run(new Form_KhachHang());
         }
     }
 }

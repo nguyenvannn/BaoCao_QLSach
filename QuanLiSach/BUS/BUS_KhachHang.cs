@@ -15,8 +15,11 @@ namespace BUS
         {
 
             return emp.GetData(sql);
-            
 
+        }
+        public int Insert(string maKH, string hotenKH, string diachi, string sdt, string email)
+        {
+            return emp.Insert(maKH, hotenKH, diachi, sdt, email);
         }
     }
 }
