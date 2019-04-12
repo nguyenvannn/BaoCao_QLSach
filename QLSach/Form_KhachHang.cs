@@ -145,7 +145,7 @@ namespace QLSach
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi!" + ex.Message);
+                MessageBox.Show("Hãy nhập tất cả dữ liệu");
             }
         }
 

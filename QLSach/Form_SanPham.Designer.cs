@@ -219,6 +219,7 @@
             this.Controls.Add(this.label4);
             this.Name = "Form_SanPham";
             this.Text = "Form_SanPham";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_SanPham_FormClosing);
             this.Load += new System.EventHandler(this.Form_SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();

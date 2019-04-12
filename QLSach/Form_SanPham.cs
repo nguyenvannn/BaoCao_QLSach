@@ -46,7 +46,22 @@ namespace QLSach
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string MaSP = txtMaSP.Text.Trim();
+                string TenSP = txtTenSP.Text.Trim();
+                double Dongia = double.Parse(txtDongia.Text.Trim());
+                
 
+                emp.Insert(MaSP, TenSP, Dongia);
+                LoadSanPham();
+                MessageBox.Show("Thanh cong");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Loi!" + ex.Message);
+            }
         }
 
         private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
