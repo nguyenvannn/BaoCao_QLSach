@@ -39,6 +39,11 @@ namespace QLSach
                 e.Cancel = true;
         }
 
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void btThem_Click(object sender, EventArgs e)
         //{
         //    try
@@ -46,7 +51,7 @@ namespace QLSach
         //        string MaSP = txtMaSP.Text;
         //        string TenSP = txtTenSP.Text;
         //        double Dongia = txtDongia.Text;
-                
+
 
         //        Bus_Sanpham.Them(MaSP, TenSP, Dongia);
         //        LoadSanPham();

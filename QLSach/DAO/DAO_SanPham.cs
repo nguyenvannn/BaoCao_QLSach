@@ -49,24 +49,24 @@ namespace DAO
                 Disconnect();
             }
         }
-        //public int Them(string maSP, string tenSP, double dongia)
-        //{
+        public int Insert(string maSP, string tenSP, double dongia)
+        {
 
-        //    try
-        //    {
-        //        Connect();
-        //        string sql = "INSERT INTO SanPham VALUES('" + maSP + "','" + tenSP + "','" + dongia +"')";
-        //        int numOfRow = ExecuteNonQuery(sql);
-        //        return numOfRow;
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Disconnect();
-        //    }
-        //}
+            try
+            {
+                Connect();
+                string sql = "INSERT INTO SanPham VALUES('" + maSP + "','" + tenSP + "','" + dongia + "')";
+                int numOfRow = ExecuteNonQuery(sql);
+                return numOfRow;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

@@ -32,14 +32,7 @@ namespace DAO
             {
                 throw ex;
             }
-            catch (InvalidOperationException ex)
-            {
-                throw ex;
-            }
-            catch (ConfigurationErrorsException ex)
-            {
-                throw ex;
-            }
+           
         }
         public void Disconnect()
         {

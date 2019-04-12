@@ -18,9 +18,9 @@ namespace BUS
             return emp.GetData(sql);
 
         }
-        //public int Them(string maSP, string tenSP, double dongia)
-        //{
-        //    return Dao_SP.Them(maSP, tenSP, dongia);
-        //}
+        public int Insert(string maSP, string tenSP, double dongia)
+        {
+            return emp.Insert(maSP, tenSP, dongia);
+        }
     }
 }
