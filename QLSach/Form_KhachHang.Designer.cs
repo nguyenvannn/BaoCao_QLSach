@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btThoat = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +68,22 @@
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(479, 414);
             this.dgvKhachHang.TabIndex = 0;
+            this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick_1);
+            this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick_1);
+            // 
+            // Del
+            // 
+            this.Del.HeaderText = "Xóa";
+            this.Del.Name = "Del";
+            this.Del.Text = "Xóa";
+            this.Del.Width = 40;
+            // 
+            // Sua
+            // 
+            this.Sua.HeaderText = "Sửa";
+            this.Sua.Name = "Sua";
+            this.Sua.Text = "Sửa";
+            this.Sua.Width = 40;
             // 
             // panel1
             // 
@@ -112,6 +128,7 @@
             this.btTimKiem.TabIndex = 12;
             this.btTimKiem.Text = "Tìm Kiếm";
             this.btTimKiem.UseVisualStyleBackColor = false;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click_1);
             // 
             // btXoaKH
             // 
@@ -123,6 +140,7 @@
             this.btXoaKH.TabIndex = 12;
             this.btXoaKH.Text = "Xóa";
             this.btXoaKH.UseVisualStyleBackColor = false;
+            this.btXoaKH.Click += new System.EventHandler(this.btXoaKH_Click_1);
             // 
             // btSuaKH
             // 
@@ -134,6 +152,7 @@
             this.btSuaKH.TabIndex = 11;
             this.btSuaKH.Text = "Sửa";
             this.btSuaKH.UseVisualStyleBackColor = false;
+            this.btSuaKH.Click += new System.EventHandler(this.btSuaKH_Click_1);
             // 
             // btThemKH
             // 
@@ -145,6 +164,7 @@
             this.btThemKH.TabIndex = 10;
             this.btThemKH.Text = "Thêm";
             this.btThemKH.UseVisualStyleBackColor = false;
+            this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click_1);
             // 
             // txtTenKH
             // 
@@ -251,6 +271,7 @@
             this.btSanPham.TabIndex = 11;
             this.btSanPham.Text = "Sản Phẩm";
             this.btSanPham.UseVisualStyleBackColor = false;
+            this.btSanPham.Click += new System.EventHandler(this.btSanPham_Click_1);
             // 
             // panel2
             // 
@@ -279,20 +300,6 @@
             this.panel3.Size = new System.Drawing.Size(334, 64);
             this.panel3.TabIndex = 16;
             // 
-            // Del
-            // 
-            this.Del.HeaderText = "Xóa";
-            this.Del.Name = "Del";
-            this.Del.Text = "Xóa";
-            this.Del.Width = 40;
-            // 
-            // Sua
-            // 
-            this.Sua.HeaderText = "Sửa";
-            this.Sua.Name = "Sua";
-            this.Sua.Text = "Sửa";
-            this.Sua.Width = 40;
-            // 
             // Form_KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +311,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form_KhachHang";
             this.Text = "Form_KhachHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_KhachHang_FormClosing_1);
             this.Load += new System.EventHandler(this.Form_KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.panel1.ResumeLayout(false);

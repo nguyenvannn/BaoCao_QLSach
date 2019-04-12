@@ -13,3 +13,8 @@ C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\bin\Debug\DAO.pdb
 C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.dll
 C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.pdb
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\bin\Debug\DAO.dll
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\bin\Debug\DAO.pdb
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\DAO\obj\Debug\DAO.dll
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\DAO\obj\Debug\DAO.pdb

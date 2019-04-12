@@ -8,7 +8,6 @@ namespace DTO
 {
     public class DTO_KhachHang
     {
-      
         public string MaKH { get; set; }
         public string HotenKH { get; set; }
         public string Diachi { get; set; }

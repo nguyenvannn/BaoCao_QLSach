@@ -33,12 +33,15 @@ namespace QLSach
             dgvKhachHang.DataSource = emp.GetData(sql);
 
         }
-
-        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btThoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void dgvKhachHang_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             int col = e.ColumnIndex;
-            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn&&dgvKhachHang.Columns[col].Name == "Del")
+            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn && dgvKhachHang.Columns[col].Name == "Del")
             {
                 int row = e.RowIndex;
                 string maKH = dgvKhachHang.Rows[row].Cells["MaKH"].Value.ToString();
@@ -79,17 +82,17 @@ namespace QLSach
             }
         }
 
-        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKhachHang_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            txtMaKH.Text = dgvKhachHang.Rows[row].Cells[0].Value.ToString();
-            txtTenKH.Text = dgvKhachHang.Rows[row].Cells[1].Value.ToString();
-            txtDiaChi.Text = dgvKhachHang.Rows[row].Cells[2].Value.ToString();
-            txtSdt.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
-            txtEmail.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
+            txtMaKH.Text = dgvKhachHang.Rows[row].Cells[2].Value.ToString();
+            txtTenKH.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
+            txtDiaChi.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
+            txtSdt.Text = dgvKhachHang.Rows[row].Cells[5].Value.ToString();
+            txtEmail.Text = dgvKhachHang.Rows[row].Cells[6].Value.ToString();
         }
 
-        private void btThemKH_Click(object sender, EventArgs e)
+        private void btThemKH_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -110,14 +113,14 @@ namespace QLSach
             }
         }
 
-        private void Form_KhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form_KhachHang_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn muốn thoát?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             == DialogResult.No)
                 e.Cancel = true;
         }
 
-        private void btXoaKH_Click(object sender, EventArgs e)
+        private void btXoaKH_Click_1(object sender, EventArgs e)
         {
             string MaKH = txtMaKH.Text.Trim();
             emp.Delete1(MaKH);
@@ -125,7 +128,7 @@ namespace QLSach
             MessageBox.Show("Ban da xoa thanh cong!");
         }
 
-        private void btSuaKH_Click(object sender, EventArgs e)
+        private void btSuaKH_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -146,21 +149,16 @@ namespace QLSach
             }
         }
 
-        private void btSanPham_Click(object sender, EventArgs e)
+        private void btSanPham_Click_1(object sender, EventArgs e)
         {
             Form_SanPham formSP = new Form_SanPham();
             formSP.ShowDialog();
         }
 
-        private void btTimKiem_Click(object sender, EventArgs e)
+        private void btTimKiem_Click_1(object sender, EventArgs e)
         {
             string sql = "SELECT *FROM KhachHang WHERE MaKH Like'" + txtMaKH.Text + "%'";
             dgvKhachHang.DataSource = emp.GetData(sql);
-        }
-
-        private void btThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
