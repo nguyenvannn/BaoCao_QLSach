@@ -41,7 +41,10 @@ namespace QLSach
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-
+            string MaSP = txtMaSP.Text.Trim();
+            emp.Delete1(MaSP);
+            LoadSanPham();
+            MessageBox.Show("Ban da xoa thanh cong!");
         }
 
         private void btThem_Click(object sender, EventArgs e)
