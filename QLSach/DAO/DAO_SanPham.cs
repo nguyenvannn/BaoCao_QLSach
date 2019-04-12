@@ -77,7 +77,21 @@ namespace DAO
         }
         public int Update(string maSP, string tenSP, double dongia)
         {
-            
+            try
+            {
+                data.Connect();
+                string sql = "UPDATE KhachHang set TenSP =N'" + tenSP + "', Dongia=N'" + dongia +  "' WHERE MaKH =" + maSP;
+                int numberRow = data.ExecuteNonQuery(sql);
+                return numberRow;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
     }
 }
