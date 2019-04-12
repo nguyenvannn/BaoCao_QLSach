@@ -1,0 +1,15 @@
+C:\Users\lanan\Downloads\QLSach\bin\Debug\DAO.dll
+C:\Users\lanan\Downloads\QLSach\bin\Debug\DAO.pdb
+C:\Users\lanan\Downloads\QLSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\lanan\Downloads\QLSach\DAO\obj\Debug\DAO.dll
+C:\Users\lanan\Downloads\QLSach\DAO\obj\Debug\DAO.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\bin\Debug\DAO.dll
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\bin\Debug\DAO.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.dll
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\bin\Debug\DAO.dll
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\bin\Debug\DAO.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.dll
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\DAO\obj\Debug\DAO.pdb

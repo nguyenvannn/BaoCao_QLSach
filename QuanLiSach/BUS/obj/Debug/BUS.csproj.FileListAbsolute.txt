@@ -1,5 +1,0 @@
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\bin\Debug\BUS.dll
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\bin\Debug\BUS.pdb
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\BUS\obj\Debug\BUS.dll
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QuanLiSach\BUS\obj\Debug\BUS.pdb

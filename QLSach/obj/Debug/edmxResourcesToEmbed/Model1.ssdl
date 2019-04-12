@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLSachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietHoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChiTietHoaDon">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="HoaDonId" />
+      <PropertyRef Name="SanPhamId" />
+      <PropertyRef Name="SoLuong" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoaDonId" Type="int" Nullable="false" />
+    <Property Name="SanPhamId" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietHoaDonMua' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChiTietHoaDonMua">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="HoaDonMuaId" />
+      <PropertyRef Name="SanPhamId" />
+      <PropertyRef Name="SoLuong" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoaDonMuaId" Type="int" Nullable="false" />
+    <Property Name="SanPhamId" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChiTietKho">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="HangHoaId" />
+      <PropertyRef Name="KhoId" />
+      <PropertyRef Name="ThoiGianNhapKho" />
+      <PropertyRef Name="SoLuong" />
+      <PropertyRef Name="UserIdNhap" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HangHoaId" Type="int" Nullable="false" />
+    <Property Name="KhoId" Type="int" Nullable="false" />
+    <Property Name="ThoiGianNhapKho" Type="datetime" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+    <Property Name="UserIdNhap" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.HoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="NhanVienId" />
+      <PropertyRef Name="KhachHangId" />
+      <PropertyRef Name="ThoiGian" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NhanVienId" Type="int" Nullable="false" />
+    <Property Name="KhachHangId" Type="int" Nullable="false" />
+    <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+    <Property Name="TongTien" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.HoaDonMua' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HoaDonMua">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="NhanVienId" />
+      <PropertyRef Name="NhaCungCapId" />
+      <PropertyRef Name="ThoiGian" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NhanVienId" Type="int" Nullable="false" />
+    <Property Name="NhaCungCapId" Type="int" Nullable="false" />
+    <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+    <Property Name="TongTien" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.KhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MaKH" />
+      <PropertyRef Name="HoTenKH" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKH" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="HoTenKH" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sdt" Type="nchar" MaxLength="20" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.Kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kho">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="TenKho" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKho" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenKho" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.NhaCungCap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MaNCC" />
+      <PropertyRef Name="TenNCC" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="Sdt" />
+      <PropertyRef Name="Website" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaNCC" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNCC" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sdt" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="Website" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.NhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MaNV" />
+      <PropertyRef Name="HoTenNV" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="Sdt" />
+      <PropertyRef Name="Cmnd" />
+      <PropertyRef Name="CapBac" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaNV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="HoTenNV" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sdt" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="Cmnd" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="CapBac" Type="int" Nullable="false" />
+    <Property Name="Luong" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.Quyen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Quyen">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TenQuyen" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenQuyen" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.SanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="MaSP" />
+      <PropertyRef Name="TenSP" />
+      <PropertyRef Name="Gia" />
+      <PropertyRef Name="HienCo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSP" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Gia" Type="money" Nullable="false" />
+    <Property Name="HienCo" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.TaiKhoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QLSachModelStoreContainer">
+    <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChiTietHoaDon].[Id] AS [Id], 
+    [ChiTietHoaDon].[HoaDonId] AS [HoaDonId], 
+    [ChiTietHoaDon].[SanPhamId] AS [SanPhamId], 
+    [ChiTietHoaDon].[SoLuong] AS [SoLuong]
+    FROM [dbo].[ChiTietHoaDon] AS [ChiTietHoaDon]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChiTietHoaDonMua" EntityType="Self.ChiTietHoaDonMua" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChiTietHoaDonMua].[Id] AS [Id], 
+    [ChiTietHoaDonMua].[HoaDonMuaId] AS [HoaDonMuaId], 
+    [ChiTietHoaDonMua].[SanPhamId] AS [SanPhamId], 
+    [ChiTietHoaDonMua].[SoLuong] AS [SoLuong]
+    FROM [dbo].[ChiTietHoaDonMua] AS [ChiTietHoaDonMua]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChiTietKho" EntityType="Self.ChiTietKho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChiTietKho].[Id] AS [Id], 
+    [ChiTietKho].[HangHoaId] AS [HangHoaId], 
+    [ChiTietKho].[KhoId] AS [KhoId], 
+    [ChiTietKho].[ThoiGianNhapKho] AS [ThoiGianNhapKho], 
+    [ChiTietKho].[SoLuong] AS [SoLuong], 
+    [ChiTietKho].[UserIdNhap] AS [UserIdNhap]
+    FROM [dbo].[ChiTietKho] AS [ChiTietKho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HoaDon].[Id] AS [Id], 
+    [HoaDon].[NhanVienId] AS [NhanVienId], 
+    [HoaDon].[KhachHangId] AS [KhachHangId], 
+    [HoaDon].[ThoiGian] AS [ThoiGian], 
+    [HoaDon].[TongTien] AS [TongTien]
+    FROM [dbo].[HoaDon] AS [HoaDon]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HoaDonMua" EntityType="Self.HoaDonMua" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HoaDonMua].[Id] AS [Id], 
+    [HoaDonMua].[NhanVienId] AS [NhanVienId], 
+    [HoaDonMua].[NhaCungCapId] AS [NhaCungCapId], 
+    [HoaDonMua].[ThoiGian] AS [ThoiGian], 
+    [HoaDonMua].[TongTien] AS [TongTien]
+    FROM [dbo].[HoaDonMua] AS [HoaDonMua]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KhachHang].[Id] AS [Id], 
+    [KhachHang].[MaKH] AS [MaKH], 
+    [KhachHang].[HoTenKH] AS [HoTenKH], 
+    [KhachHang].[DiaChi] AS [DiaChi], 
+    [KhachHang].[Sdt] AS [Sdt], 
+    [KhachHang].[Email] AS [Email]
+    FROM [dbo].[KhachHang] AS [KhachHang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Kho" EntityType="Self.Kho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kho].[Id] AS [Id], 
+    [Kho].[MaKho] AS [MaKho], 
+    [Kho].[TenKho] AS [TenKho]
+    FROM [dbo].[Kho] AS [Kho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NhaCungCap].[Id] AS [Id], 
+    [NhaCungCap].[MaNCC] AS [MaNCC], 
+    [NhaCungCap].[TenNCC] AS [TenNCC], 
+    [NhaCungCap].[DiaChi] AS [DiaChi], 
+    [NhaCungCap].[Sdt] AS [Sdt], 
+    [NhaCungCap].[Email] AS [Email], 
+    [NhaCungCap].[Website] AS [Website]
+    FROM [dbo].[NhaCungCap] AS [NhaCungCap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NhanVien].[Id] AS [Id], 
+    [NhanVien].[MaNV] AS [MaNV], 
+    [NhanVien].[HoTenNV] AS [HoTenNV], 
+    [NhanVien].[DiaChi] AS [DiaChi], 
+    [NhanVien].[Sdt] AS [Sdt], 
+    [NhanVien].[Email] AS [Email], 
+    [NhanVien].[Cmnd] AS [Cmnd], 
+    [NhanVien].[CapBac] AS [CapBac], 
+    [NhanVien].[Luong] AS [Luong]
+    FROM [dbo].[NhanVien] AS [NhanVien]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Quyen" EntityType="Self.Quyen" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Quyen].[Id] AS [Id], 
+    [Quyen].[TenQuyen] AS [TenQuyen]
+    FROM [dbo].[Quyen] AS [Quyen]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SanPham].[Id] AS [Id], 
+    [SanPham].[MaSP] AS [MaSP], 
+    [SanPham].[TenSP] AS [TenSP], 
+    [SanPham].[Gia] AS [Gia], 
+    [SanPham].[HienCo] AS [HienCo]
+    FROM [dbo].[SanPham] AS [SanPham]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TaiKhoan].[Id] AS [Id], 
+    [TaiKhoan].[Username] AS [Username], 
+    [TaiKhoan].[Password] AS [Password], 
+    [TaiKhoan].[UserId] AS [UserId]
+    FROM [dbo].[TaiKhoan] AS [TaiKhoan]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

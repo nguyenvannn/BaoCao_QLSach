@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLSachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietHoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChiTietHoaDon">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HoaDonId" />
+            <PropertyRef Name="SanPhamId" />
+            <PropertyRef Name="SoLuong" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HoaDonId" Type="int" Nullable="false" />
+          <Property Name="SanPhamId" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietHoaDonMua' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChiTietHoaDonMua">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HoaDonMuaId" />
+            <PropertyRef Name="SanPhamId" />
+            <PropertyRef Name="SoLuong" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HoaDonMuaId" Type="int" Nullable="false" />
+          <Property Name="SanPhamId" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.ChiTietKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChiTietKho">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HangHoaId" />
+            <PropertyRef Name="KhoId" />
+            <PropertyRef Name="ThoiGianNhapKho" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="UserIdNhap" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HangHoaId" Type="int" Nullable="false" />
+          <Property Name="KhoId" Type="int" Nullable="false" />
+          <Property Name="ThoiGianNhapKho" Type="datetime" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="UserIdNhap" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.HoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NhanVienId" />
+            <PropertyRef Name="KhachHangId" />
+            <PropertyRef Name="ThoiGian" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NhanVienId" Type="int" Nullable="false" />
+          <Property Name="KhachHangId" Type="int" Nullable="false" />
+          <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+          <Property Name="TongTien" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.HoaDonMua' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HoaDonMua">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NhanVienId" />
+            <PropertyRef Name="NhaCungCapId" />
+            <PropertyRef Name="ThoiGian" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NhanVienId" Type="int" Nullable="false" />
+          <Property Name="NhaCungCapId" Type="int" Nullable="false" />
+          <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+          <Property Name="TongTien" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.KhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaKH" />
+            <PropertyRef Name="HoTenKH" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaKH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTenKH" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sdt" Type="nchar" MaxLength="20" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.Kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaKho" />
+            <PropertyRef Name="TenKho" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaKho" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenKho" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.NhaCungCap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaNCC" />
+            <PropertyRef Name="TenNCC" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="Sdt" />
+            <PropertyRef Name="Website" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaNCC" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenNCC" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sdt" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+          <Property Name="Website" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.NhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaNV" />
+            <PropertyRef Name="HoTenNV" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="Sdt" />
+            <PropertyRef Name="Cmnd" />
+            <PropertyRef Name="CapBac" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaNV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTenNV" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sdt" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+          <Property Name="Cmnd" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="CapBac" Type="int" Nullable="false" />
+          <Property Name="Luong" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.Quyen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TenQuyen" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenQuyen" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.SanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="Gia" />
+            <PropertyRef Name="HienCo" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaSP" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Gia" Type="money" Nullable="false" />
+          <Property Name="HienCo" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSach.dbo.TaiKhoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QLSachModelStoreContainer">
+          <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChiTietHoaDon].[Id] AS [Id], 
+    [ChiTietHoaDon].[HoaDonId] AS [HoaDonId], 
+    [ChiTietHoaDon].[SanPhamId] AS [SanPhamId], 
+    [ChiTietHoaDon].[SoLuong] AS [SoLuong]
+    FROM [dbo].[ChiTietHoaDon] AS [ChiTietHoaDon]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChiTietHoaDonMua" EntityType="Self.ChiTietHoaDonMua" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChiTietHoaDonMua].[Id] AS [Id], 
+    [ChiTietHoaDonMua].[HoaDonMuaId] AS [HoaDonMuaId], 
+    [ChiTietHoaDonMua].[SanPhamId] AS [SanPhamId], 
+    [ChiTietHoaDonMua].[SoLuong] AS [SoLuong]
+    FROM [dbo].[ChiTietHoaDonMua] AS [ChiTietHoaDonMua]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChiTietKho" EntityType="Self.ChiTietKho" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChiTietKho].[Id] AS [Id], 
+    [ChiTietKho].[HangHoaId] AS [HangHoaId], 
+    [ChiTietKho].[KhoId] AS [KhoId], 
+    [ChiTietKho].[ThoiGianNhapKho] AS [ThoiGianNhapKho], 
+    [ChiTietKho].[SoLuong] AS [SoLuong], 
+    [ChiTietKho].[UserIdNhap] AS [UserIdNhap]
+    FROM [dbo].[ChiTietKho] AS [ChiTietKho]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HoaDon].[Id] AS [Id], 
+    [HoaDon].[NhanVienId] AS [NhanVienId], 
+    [HoaDon].[KhachHangId] AS [KhachHangId], 
+    [HoaDon].[ThoiGian] AS [ThoiGian], 
+    [HoaDon].[TongTien] AS [TongTien]
+    FROM [dbo].[HoaDon] AS [HoaDon]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HoaDonMua" EntityType="Self.HoaDonMua" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HoaDonMua].[Id] AS [Id], 
+    [HoaDonMua].[NhanVienId] AS [NhanVienId], 
+    [HoaDonMua].[NhaCungCapId] AS [NhaCungCapId], 
+    [HoaDonMua].[ThoiGian] AS [ThoiGian], 
+    [HoaDonMua].[TongTien] AS [TongTien]
+    FROM [dbo].[HoaDonMua] AS [HoaDonMua]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [KhachHang].[Id] AS [Id], 
+    [KhachHang].[MaKH] AS [MaKH], 
+    [KhachHang].[HoTenKH] AS [HoTenKH], 
+    [KhachHang].[DiaChi] AS [DiaChi], 
+    [KhachHang].[Sdt] AS [Sdt], 
+    [KhachHang].[Email] AS [Email]
+    FROM [dbo].[KhachHang] AS [KhachHang]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Kho" EntityType="Self.Kho" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Kho].[Id] AS [Id], 
+    [Kho].[MaKho] AS [MaKho], 
+    [Kho].[TenKho] AS [TenKho]
+    FROM [dbo].[Kho] AS [Kho]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [NhaCungCap].[Id] AS [Id], 
+    [NhaCungCap].[MaNCC] AS [MaNCC], 
+    [NhaCungCap].[TenNCC] AS [TenNCC], 
+    [NhaCungCap].[DiaChi] AS [DiaChi], 
+    [NhaCungCap].[Sdt] AS [Sdt], 
+    [NhaCungCap].[Email] AS [Email], 
+    [NhaCungCap].[Website] AS [Website]
+    FROM [dbo].[NhaCungCap] AS [NhaCungCap]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [NhanVien].[Id] AS [Id], 
+    [NhanVien].[MaNV] AS [MaNV], 
+    [NhanVien].[HoTenNV] AS [HoTenNV], 
+    [NhanVien].[DiaChi] AS [DiaChi], 
+    [NhanVien].[Sdt] AS [Sdt], 
+    [NhanVien].[Email] AS [Email], 
+    [NhanVien].[Cmnd] AS [Cmnd], 
+    [NhanVien].[CapBac] AS [CapBac], 
+    [NhanVien].[Luong] AS [Luong]
+    FROM [dbo].[NhanVien] AS [NhanVien]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Quyen" EntityType="Self.Quyen" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Quyen].[Id] AS [Id], 
+    [Quyen].[TenQuyen] AS [TenQuyen]
+    FROM [dbo].[Quyen] AS [Quyen]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SanPham].[Id] AS [Id], 
+    [SanPham].[MaSP] AS [MaSP], 
+    [SanPham].[TenSP] AS [TenSP], 
+    [SanPham].[Gia] AS [Gia], 
+    [SanPham].[HienCo] AS [HienCo]
+    FROM [dbo].[SanPham] AS [SanPham]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TaiKhoan].[Id] AS [Id], 
+    [TaiKhoan].[Username] AS [Username], 
+    [TaiKhoan].[Password] AS [Password], 
+    [TaiKhoan].[UserId] AS [UserId]
+    FROM [dbo].[TaiKhoan] AS [TaiKhoan]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLSachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChiTietHoaDon">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HoaDonId" />
+            <PropertyRef Name="SanPhamId" />
+            <PropertyRef Name="SoLuong" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoaDonId" Type="Int32" Nullable="false" />
+          <Property Name="SanPhamId" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChiTietHoaDonMua">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HoaDonMuaId" />
+            <PropertyRef Name="SanPhamId" />
+            <PropertyRef Name="SoLuong" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoaDonMuaId" Type="Int32" Nullable="false" />
+          <Property Name="SanPhamId" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChiTietKho">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HangHoaId" />
+            <PropertyRef Name="KhoId" />
+            <PropertyRef Name="ThoiGianNhapKho" />
+            <PropertyRef Name="SoLuong" />
+            <PropertyRef Name="UserIdNhap" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HangHoaId" Type="Int32" Nullable="false" />
+          <Property Name="KhoId" Type="Int32" Nullable="false" />
+          <Property Name="ThoiGianNhapKho" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="UserIdNhap" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NhanVienId" />
+            <PropertyRef Name="KhachHangId" />
+            <PropertyRef Name="ThoiGian" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NhanVienId" Type="Int32" Nullable="false" />
+          <Property Name="KhachHangId" Type="Int32" Nullable="false" />
+          <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="HoaDonMua">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NhanVienId" />
+            <PropertyRef Name="NhaCungCapId" />
+            <PropertyRef Name="ThoiGian" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NhanVienId" Type="Int32" Nullable="false" />
+          <Property Name="NhaCungCapId" Type="Int32" Nullable="false" />
+          <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaKH" />
+            <PropertyRef Name="HoTenKH" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="HoTenKH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaKho" />
+            <PropertyRef Name="TenKho" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKho" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenKho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaNCC" />
+            <PropertyRef Name="TenNCC" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="Sdt" />
+            <PropertyRef Name="Website" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNCC" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenNCC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaNV" />
+            <PropertyRef Name="HoTenNV" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="Sdt" />
+            <PropertyRef Name="Cmnd" />
+            <PropertyRef Name="CapBac" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="HoTenNV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Cmnd" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="CapBac" Type="Int32" Nullable="false" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TenQuyen" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenQuyen" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="MaSP" />
+            <PropertyRef Name="TenSP" />
+            <PropertyRef Name="Gia" />
+            <PropertyRef Name="HienCo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="HienCo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QLSachEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
+          <EntitySet Name="ChiTietHoaDonMuas" EntityType="Self.ChiTietHoaDonMua" />
+          <EntitySet Name="ChiTietKhoes" EntityType="Self.ChiTietKho" />
+          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+          <EntitySet Name="HoaDonMuas" EntityType="Self.HoaDonMua" />
+          <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+          <EntitySet Name="Khoes" EntityType="Self.Kho" />
+          <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+          <EntitySet Name="Quyens" EntityType="Self.Quyen" />
+          <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLSachModelStoreContainer" CdmEntityContainer="QLSachEntities1">
+          <EntitySetMapping Name="ChiTietHoaDons">
+            <EntityTypeMapping TypeName="QLSachModel.ChiTietHoaDon">
+              <MappingFragment StoreEntitySet="ChiTietHoaDon">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HoaDonId" ColumnName="HoaDonId" />
+                <ScalarProperty Name="SanPhamId" ColumnName="SanPhamId" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietHoaDonMuas">
+            <EntityTypeMapping TypeName="QLSachModel.ChiTietHoaDonMua">
+              <MappingFragment StoreEntitySet="ChiTietHoaDonMua">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HoaDonMuaId" ColumnName="HoaDonMuaId" />
+                <ScalarProperty Name="SanPhamId" ColumnName="SanPhamId" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietKhoes">
+            <EntityTypeMapping TypeName="QLSachModel.ChiTietKho">
+              <MappingFragment StoreEntitySet="ChiTietKho">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />
+                <ScalarProperty Name="KhoId" ColumnName="KhoId" />
+                <ScalarProperty Name="ThoiGianNhapKho" ColumnName="ThoiGianNhapKho" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="UserIdNhap" ColumnName="UserIdNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="QLSachModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
+                <ScalarProperty Name="KhachHangId" ColumnName="KhachHangId" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDonMuas">
+            <EntityTypeMapping TypeName="QLSachModel.HoaDonMua">
+              <MappingFragment StoreEntitySet="HoaDonMua">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
+                <ScalarProperty Name="NhaCungCapId" ColumnName="NhaCungCapId" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhachHangs">
+            <EntityTypeMapping TypeName="QLSachModel.KhachHang">
+              <MappingFragment StoreEntitySet="KhachHang">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="HoTenKH" ColumnName="HoTenKH" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Khoes">
+            <EntityTypeMapping TypeName="QLSachModel.Kho">
+              <MappingFragment StoreEntitySet="Kho">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaKho" ColumnName="MaKho" />
+                <ScalarProperty Name="TenKho" ColumnName="TenKho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhaCungCaps">
+            <EntityTypeMapping TypeName="QLSachModel.NhaCungCap">
+              <MappingFragment StoreEntitySet="NhaCungCap">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanViens">
+            <EntityTypeMapping TypeName="QLSachModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTenNV" ColumnName="HoTenNV" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Cmnd" ColumnName="Cmnd" />
+                <ScalarProperty Name="CapBac" ColumnName="CapBac" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quyens">
+            <EntityTypeMapping TypeName="QLSachModel.Quyen">
+              <MappingFragment StoreEntitySet="Quyen">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhams">
+            <EntityTypeMapping TypeName="QLSachModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="HienCo" ColumnName="HienCo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="QLSachModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

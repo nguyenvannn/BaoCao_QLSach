@@ -1,0 +1,15 @@
+C:\Users\lanan\Downloads\QLSach\bin\Debug\BUS.dll
+C:\Users\lanan\Downloads\QLSach\bin\Debug\BUS.pdb
+C:\Users\lanan\Downloads\QLSach\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\lanan\Downloads\QLSach\BUS\obj\Debug\BUS.dll
+C:\Users\lanan\Downloads\QLSach\BUS\obj\Debug\BUS.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\bin\Debug\BUS.dll
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\bin\Debug\BUS.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.dll
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\bin\Debug\BUS.dll
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\bin\Debug\BUS.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.dll
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\BUS\obj\Debug\BUS.pdb

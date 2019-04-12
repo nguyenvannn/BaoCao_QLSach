@@ -1,0 +1,37 @@
+c:\users\van nguyen\documents\visual studio 2015\Projects\QLSach\bin\Debug\QLSach.exe.config
+c:\users\van nguyen\documents\visual studio 2015\Projects\bin\Debug\QLSach.exe.config
+C:\Users\lanan\Downloads\bin\Debug\QLSach.exe.config
+C:\Users\lanan\Downloads\bin\Debug\QLSach.exe
+C:\Users\lanan\Downloads\bin\Debug\QLSach.pdb
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.csprojResolveAssemblyReference.cache
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.Form_DangNhap.resources
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.Form_KhachHang.resources
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.Properties.Resources.resources
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.exe
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.pdb
+C:\Users\lanan\Downloads\QLSach\obj\Debug\QLSach.Form_SanPham.resources
+C:\Users\Van Nguyen\Documents\Visual Studio 2015\Projects\QLSach\obj\Debug\QLSach.exe
+C:\Users\Van Nguyen\Documents\Visual Studio 2015\Projects\QLSach\obj\Debug\QLSach.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_DangNhap.resources
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_KhachHang.resources
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_SanPham.resources
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Properties.Resources.resources
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\bin\Debug\QLSach.exe.config
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\bin\Debug\QLSach.exe
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\bin\Debug\QLSach.pdb
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.exe
+C:\Users\Van Nguyen\Desktop\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\bin\Debug\QLSach.exe.config
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\bin\Debug\QLSach.exe
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\bin\Debug\QLSach.pdb
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.csprojResolveAssemblyReference.cache
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_DangNhap.resources
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_KhachHang.resources
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Form_SanPham.resources
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.Properties.Resources.resources
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.exe
+C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.pdb
