@@ -55,6 +55,7 @@
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.Size = new System.Drawing.Size(443, 247);
             this.dgvSanPham.TabIndex = 0;
+            this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
             // btThem
             // 
@@ -66,6 +67,7 @@
             this.btThem.TabIndex = 1;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btXoa
             // 

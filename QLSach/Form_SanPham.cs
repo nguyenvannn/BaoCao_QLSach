@@ -44,6 +44,54 @@ namespace QLSach
 
         }
 
+        private void btThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+            if (dgvSanPham.Columns[col] is DataGridViewButtonColumn && dgvSanPham.Columns[col].Name == "Del")
+            {
+                int row = e.RowIndex;
+                string maKH = dgvSanPham.Rows[row].Cells["MaSP"].Value.ToString();
+                try
+                {
+                    int numOfRows = emp.Delete1(maKH);
+                    if (numOfRows > 0)
+                    {
+                        LoadSanPham();
+                        MessageBox.Show("Bạn đã xóa khách hàng [" + maKH + "]");
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi xóa dữ liệu\n" + ex.Message);
+                }
+            }
+            if (dgvSanPham.Columns[col] is DataGridViewButtonColumn && dgvSanPham.Columns[col].Name == "Sua")
+            {
+                int row = e.ColumnIndex;
+                string maSP = dgvSanPham.Rows[row].Cells["MaSP"].Value.ToString();
+                string tenSP = dgvSanPham.Rows[row].Cells["TenSP"].Value.ToString();
+                double dongia = double.Parse(dgvSanPham.Rows[row].Cells["Dongia"].Value.ToString());
+               
+                try
+                {
+                    emp.Update(maSP, tenSP, dongia);
+                    LoadSanPham();
+                    MessageBox.Show("Ban da update thanh cong!!");
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi!!" + ex.Message);
+                }
+            }
+        }
+
         //private void btThem_Click(object sender, EventArgs e)
         //{
         //    try

@@ -22,5 +22,17 @@ namespace BUS
         {
             return emp.Insert(maSP, tenSP, dongia);
         }
+        public int Delete1(string maSP)
+        {
+            return emp.Delete1(maSP);
+        }
+        public void Update(string maSP, string tenSP, double dongia)
+        {
+            emp.Update(maSP, tenSP, dongia);
+        }
+        public int Search(string maSP)
+        {
+            return emp.Search(maSP);
+        }
     }
 }
