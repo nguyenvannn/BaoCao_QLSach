@@ -93,5 +93,24 @@ namespace DAO
                 Disconnect();
             }
         }
+        public int Delete(string maSP)
+        {
+            Connect();
+            try
+            {
+                string sql = "DELETE FROM KhachHang WHERE MaSP =" + maSP;
+                int numberOfRows = ExecuteNonQuery(sql);
+                return numberOfRows;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+        }
     }
 }
