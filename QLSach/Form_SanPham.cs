@@ -92,24 +92,12 @@ namespace QLSach
             }
         }
 
-        //private void btThem_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        string MaSP = txtMaSP.Text;
-        //        string TenSP = txtTenSP.Text;
-        //        double Dongia = txtDongia.Text;
-
-
-        //        Bus_Sanpham.Them(MaSP, TenSP, Dongia);
-        //        LoadSanPham();
-        //        MessageBox.Show("Thanh cong");
-
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show("Loi!" + ex.Message);
-        //    }
-        //}
+        private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            txtMaSP.Text = dgvSanPham.Rows[row].Cells[2].Value.ToString();
+            txtTenSP.Text = dgvSanPham.Rows[row].Cells[3].Value.ToString();
+            txtDongia.Text = dgvSanPham.Rows[row].Cells[4].Value.ToString();
+        }
     }
 }

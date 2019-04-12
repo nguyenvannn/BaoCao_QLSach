@@ -12,12 +12,12 @@ namespace DTO
         public string MaSP { get; set; }
         public string TenSP { get; set; }
         public double Dongia { get; set; }
-        public DTO_Sanpham(string masp, string tensp, double DonGia)
+        public DTO_Sanpham(string masp, string tensp, double dongia)
         {
          
             this.MaSP= masp;
             this.TenSP = tensp;
-            this.Dongia = DonGia;     
+            this.Dongia = dongia;     
 
         }
 

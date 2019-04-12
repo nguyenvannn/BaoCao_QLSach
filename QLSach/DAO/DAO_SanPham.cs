@@ -14,7 +14,7 @@ namespace DAO
         public List<DTO_Sanpham> GetData(string sql)
         {
             Connect();
-            
+
             List<DTO_Sanpham> list = new List<DTO_Sanpham>();
             //string sql = "SELECT Id, MaSP, TenSP, Dongia FROM SanPham";
             try
@@ -27,7 +27,7 @@ namespace DAO
 
                 while (dr.Read())
                 {
-                   
+
                     masp = dr.GetString(0);
                     tensp = dr.GetString(1);
                     dongia = dr.GetDouble(2);
@@ -67,6 +67,17 @@ namespace DAO
             {
                 Disconnect();
             }
+        }
+        public int Delete1(string maSP)
+        {
+            data.Connect();
+            string sql = "DELETE FROM KhachHang WHERE MaSP =" + maSP;
+            int numberOff = data.ExecuteNonQuery(sql);
+            return numberOff;
+        }
+        public int Update(string maSP, string tenSP, double dongia)
+        {
+            
         }
     }
 }
