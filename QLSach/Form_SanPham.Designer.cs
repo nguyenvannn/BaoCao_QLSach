@@ -38,11 +38,11 @@
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.txtDongia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btTimKiem = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btSua = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -146,30 +146,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "BẢNG SẢN PHẨM";
             // 
-            // btTimKiem
-            // 
-            this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.Location = new System.Drawing.Point(43, 290);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(103, 35);
-            this.btTimKiem.TabIndex = 2;
-            this.btTimKiem.Text = "Tìm Kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = false;
-            this.btTimKiem.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btThoat
-            // 
-            this.btThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.Location = new System.Drawing.Point(179, 290);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(79, 35);
-            this.btThoat.TabIndex = 2;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.UseVisualStyleBackColor = false;
-            this.btThoat.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvSanPham);
@@ -180,6 +156,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btTimKiem);
+            this.panel2.Controls.Add(this.btThoat);
             this.panel2.Controls.Add(this.btSua);
             this.panel2.Controls.Add(this.txtDongia);
             this.panel2.Controls.Add(this.txtTenSP);
@@ -187,8 +165,6 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btTimKiem);
-            this.panel2.Controls.Add(this.btThoat);
             this.panel2.Controls.Add(this.btXoa);
             this.panel2.Controls.Add(this.btThem);
             this.panel2.Location = new System.Drawing.Point(464, 9);
@@ -207,6 +183,30 @@
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = false;
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
+            // 
+            // btThoat
+            // 
+            this.btThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.Location = new System.Drawing.Point(174, 290);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(78, 34);
+            this.btThoat.TabIndex = 6;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.Location = new System.Drawing.Point(46, 288);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(99, 35);
+            this.btTimKiem.TabIndex = 7;
+            this.btTimKiem.Text = "Tìm Kiếm";
+            this.btTimKiem.UseVisualStyleBackColor = false;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // Form_SanPham
             // 
@@ -242,10 +242,10 @@
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.TextBox txtDongia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btTimKiem;
-        private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btThoat;
+        private System.Windows.Forms.Button btTimKiem;
     }
 }

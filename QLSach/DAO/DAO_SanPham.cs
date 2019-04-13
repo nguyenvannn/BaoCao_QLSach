@@ -56,7 +56,7 @@ namespace DAO
             try
             {
                 Connect();
-                string sql = "INSERT INTO SanPham VALUES('" + maSP + "','" + tenSP + "','" + dongia + "')";
+                string sql = "INSERT INTO SanPham VALUES('" + maSP + "',N'" + tenSP + "','" + dongia + "')";
                 int numOfRow = ExecuteNonQuery(sql);
                 return numOfRow;
             }
@@ -72,7 +72,7 @@ namespace DAO
         public int Delete1(string maSP)
         {
             data.Connect();
-            string sql = "DELETE FROM KhachHang WHERE MaSP ='" + maSP+"'";
+            string sql = "DELETE FROM SanPham WHERE MaSP ='" + maSP+"'";
             int numberOff = data.ExecuteNonQuery(sql);
             return numberOff;
         }
@@ -81,7 +81,7 @@ namespace DAO
             try
             {
                 data.Connect();
-                string sql = "UPDATE KhachHang set TenSP =N'" + tenSP + "', Dongia=N'" + dongia + "' WHERE MaKH ='" + maSP +"'";
+                string sql = "UPDATE SanPham set TenSP =N'" + tenSP + "', Dongia=N'" + dongia + "' WHERE MaSP ='" + maSP +"'";
                 int numberRow = data.ExecuteNonQuery(sql);
                 return numberRow;
             }
@@ -101,7 +101,7 @@ namespace DAO
             SqlConnection con = new SqlConnection(str);
             try
             {
-                string sqlSearch = "IF EXISTS(SELECT FROM SanPham WHERE Ma='" + maSP.ToString() + "') BEGIN SELECT MaSP FROM SanPham WHERE MaKH='" + maSP.ToString() + "'END";
+                string sqlSearch = "IF EXISTS(SELECT FROM SanPham WHERE MaSP='" + maSP.ToString() + "') BEGIN SELECT MaSP FROM SanPham WHERE MaSP='" + maSP.ToString() + "'END";
                 SqlCommand cmd = new SqlCommand(sqlSearch, con);
                 con.Open();
                 int numberOfSearch = cmd.ExecuteNonQuery();

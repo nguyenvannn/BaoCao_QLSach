@@ -49,13 +49,13 @@ namespace QLSach
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            if (txtMaSP.Text != "")
+            if (txtMaSP.Text != "" && txtDongia.Text != "" && txtTenSP.Text !="")
             {
                 try
                 {
                     string MaSP = txtMaSP.Text.Trim();
                     string TenSP = txtTenSP.Text.Trim();
-                    double Dongia = double.Parse(txtDongia.Text.Trim());
+                    float Dongia = float.Parse(txtDongia.Text.Trim());
 
 
                     emp.Insert(MaSP, TenSP, Dongia);
@@ -102,6 +102,17 @@ namespace QLSach
             {
                 MessageBox.Show("Loi!!" + ex.Message);
             }
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT *FROM SanPham WHERE MaSP Like'" + txtMaSP.Text + "%'";
+            dgvSanPham.DataSource = emp.GetData(sql);
         }
     }
 }
