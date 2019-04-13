@@ -54,32 +54,16 @@ namespace DAO
                 Disconnect();
             }
         }
-        public int Delete(string maKH)
-        {
-            Connect();
-            try { 
-            string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
-            int numberOfRows = ExecuteNonQuery(sql);
-            return numberOfRows;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Disconnect();
-            }
 
-        }
         public int Insert(string maKH, string hotenKH, string diachi, string dienthoai, string email)
         {
             string str = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
             SqlConnection con = new SqlConnection(str);
             Connect();
+         
             try
             {
-                string sql = "INSERT INTO KhachHang VALUES('" + maKH + "','" + hotenKH + "','" + diachi + "','" + dienthoai + "','" + email + ")";
+                string sql = "INSERT INTO KhachHang VALUES('" + maKH + "','" + hotenKH + "','" + diachi + "','" + dienthoai + "','" + email + "')";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 int numberOfRow = cmd.ExecuteNonQuery();

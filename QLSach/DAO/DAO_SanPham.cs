@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DAO
 {
@@ -16,7 +17,7 @@ namespace DAO
             Connect();
 
             List<DTO_Sanpham> list = new List<DTO_Sanpham>();
-            //string sql = "SELECT Id, MaSP, TenSP, Dongia FROM SanPham";
+           
             try
             {
                 SqlDataReader dr = ExecuteReader(sql);
@@ -71,7 +72,7 @@ namespace DAO
         public int Delete1(string maSP)
         {
             data.Connect();
-            string sql = "DELETE FROM KhachHang WHERE MaSP =" + maSP;
+            string sql = "DELETE FROM KhachHang WHERE MaSP ='" + maSP+"'";
             int numberOff = data.ExecuteNonQuery(sql);
             return numberOff;
         }
@@ -80,7 +81,7 @@ namespace DAO
             try
             {
                 data.Connect();
-                string sql = "UPDATE KhachHang set TenSP =N'" + tenSP + "', Dongia=N'" + dongia +  "' WHERE MaKH =" + maSP;
+                string sql = "UPDATE KhachHang set TenSP =N'" + tenSP + "', Dongia=N'" + dongia + "' WHERE MaKH ='" + maSP +"'";
                 int numberRow = data.ExecuteNonQuery(sql);
                 return numberRow;
             }
@@ -93,24 +94,24 @@ namespace DAO
                 Disconnect();
             }
         }
-        public int Delete(string maSP)
+        public int Search(string maSP)
         {
             Connect();
+            string str = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
+            SqlConnection con = new SqlConnection(str);
             try
             {
-                string sql = "DELETE FROM KhachHang WHERE MaSP =" + maSP;
-                int numberOfRows = ExecuteNonQuery(sql);
-                return numberOfRows;
+                string sqlSearch = "IF EXISTS(SELECT FROM SanPham WHERE Ma='" + maSP.ToString() + "') BEGIN SELECT MaSP FROM SanPham WHERE MaKH='" + maSP.ToString() + "'END";
+                SqlCommand cmd = new SqlCommand(sqlSearch, con);
+                con.Open();
+                int numberOfSearch = cmd.ExecuteNonQuery();
+                return numberOfSearch;
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
-            finally
-            {
-                Disconnect();
-            }
-
         }
+
     }
 }

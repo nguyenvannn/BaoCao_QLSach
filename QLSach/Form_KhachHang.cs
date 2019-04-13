@@ -53,23 +53,30 @@ namespace QLSach
 
         private void btThemKH_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtMaKH.Text != "")
             {
-                string MaKH = txtMaKH.Text.Trim();
-                string HotenKH = txtTenKH.Text.Trim();
-                string Diachi = txtDiaChi.Text.Trim();
-                string Dienthoai = txtSdt.Text.Trim();
-                string Email = txtEmail.Text.Trim();
-               
+                try
+                {
+                    string MaKH = txtMaKH.Text.Trim();
+                    string HotenKH = txtTenKH.Text.Trim();
+                    string Diachi = txtDiaChi.Text.Trim();
+                    string Dienthoai = txtSdt.Text.Trim();
+                    string Email = txtEmail.Text.Trim();
 
-                emp.Insert(MaKH, HotenKH, Diachi, Dienthoai, Email);
-                LoadKhachHang();
-                MessageBox.Show("Thanh cong");
 
+                    emp.Insert(MaKH, HotenKH, Diachi, Dienthoai, Email);
+                    LoadKhachHang();
+                    MessageBox.Show("Da them thanh cong");
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Loi!" + ex.Message);
+                }
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("Loi!" + ex.Message);
+                MessageBox.Show("Nhập mã khách hàng");
             }
         }
 

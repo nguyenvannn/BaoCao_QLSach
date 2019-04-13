@@ -19,10 +19,7 @@ namespace BUS
           
             
         }
-        public int Delete(string maKH)
-        {
-            return emp.Delete(maKH);
-        }
+      
         public int Insert(string maKH, string hotenKH, string diachi, string sdt, string email)
         {
             return emp.Insert(maKH, hotenKH, diachi, sdt, email);

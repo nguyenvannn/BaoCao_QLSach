@@ -49,73 +49,59 @@ namespace QLSach
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            try
+            if (txtMaSP.Text != "")
             {
-                string MaSP = txtMaSP.Text.Trim();
-                string TenSP = txtTenSP.Text.Trim();
-                double Dongia = double.Parse(txtDongia.Text.Trim());
-                
-
-                emp.Insert(MaSP, TenSP, Dongia);
-                LoadSanPham();
-                MessageBox.Show("Thanh cong");
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Loi!" + ex.Message);
-            }
-        }
-
-        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int col = e.ColumnIndex;
-            if (dgvSanPham.Columns[col] is DataGridViewButtonColumn && dgvSanPham.Columns[col].Name == "Del")
-            {
-                int row = e.RowIndex;
-                string maKH = dgvSanPham.Rows[row].Cells["MaSP"].Value.ToString();
                 try
                 {
-                    int numOfRows = emp.Delete1(maKH);
-                    if (numOfRows > 0)
-                    {
-                        LoadSanPham();
-                        MessageBox.Show("Bạn đã xóa khách hàng [" + maKH + "]");
+                    string MaSP = txtMaSP.Text.Trim();
+                    string TenSP = txtTenSP.Text.Trim();
+                    double Dongia = double.Parse(txtDongia.Text.Trim());
 
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Lỗi xóa dữ liệu\n" + ex.Message);
-                }
-            }
-            if (dgvSanPham.Columns[col] is DataGridViewButtonColumn && dgvSanPham.Columns[col].Name == "Sua")
-            {
-                int row = e.ColumnIndex;
-                string maSP = dgvSanPham.Rows[row].Cells["MaSP"].Value.ToString();
-                string tenSP = dgvSanPham.Rows[row].Cells["TenSP"].Value.ToString();
-                double dongia = double.Parse(dgvSanPham.Rows[row].Cells["Dongia"].Value.ToString());
-               
-                try
-                {
-                    emp.Update(maSP, tenSP, dongia);
+
+                    emp.Insert(MaSP, TenSP, Dongia);
                     LoadSanPham();
-                    MessageBox.Show("Ban da update thanh cong!!");
+                    MessageBox.Show("Da them thanh cong");
 
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Lỗi!!" + ex.Message);
+                    MessageBox.Show("Loi!" + ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Phải nhập mã sản phẩm");
             }
         }
 
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            txtMaSP.Text = dgvSanPham.Rows[row].Cells[2].Value.ToString();
-            txtTenSP.Text = dgvSanPham.Rows[row].Cells[3].Value.ToString();
-            txtDongia.Text = dgvSanPham.Rows[row].Cells[4].Value.ToString();
+            txtMaSP.Text = dgvSanPham.Rows[row].Cells[0].Value.ToString();
+            txtTenSP.Text = dgvSanPham.Rows[row].Cells[1].Value.ToString();
+            txtDongia.Text = dgvSanPham.Rows[row].Cells[2].Value.ToString();
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string maSP = txtMaSP.Text.Trim();
+                string tenSP = txtTenSP.Text.Trim();
+                double dongia = double.Parse(txtDongia.Text.Trim());
+
+
+
+                emp.Update(maSP, tenSP, dongia);
+                LoadSanPham();
+                MessageBox.Show("Ban da Update thanh cong !!");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Loi!!" + ex.Message);
+            }
         }
     }
 }
