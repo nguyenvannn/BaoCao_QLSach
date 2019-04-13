@@ -46,3 +46,6 @@ C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Properties.Res
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
+C:\Users\lanan\BaoCao_QLSach\bin\Debug\QLSach.exe.config
+C:\Users\lanan\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
+C:\Users\lanan\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
