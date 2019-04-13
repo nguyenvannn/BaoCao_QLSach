@@ -17,7 +17,7 @@ namespace DAO
         {
             Connect();
             List<DTO_KhachHang> list = new List<DTO_KhachHang>();
-            //sql = "SELECT MaKH, HoTenKH, DiaChi, DienThoai, Email FROM KhachHang";
+           
             try
             {
                 SqlDataReader dr = ExecuteReader(sql);
@@ -27,6 +27,7 @@ namespace DAO
                 string diachi;
                 string dienthoai;
                 string email;
+             
                 while (dr.Read())
                 {
 
@@ -35,6 +36,8 @@ namespace DAO
                     diachi = dr.GetString(2);
                     dienthoai = dr.GetString(3);
                     email = dr.GetString(4);
+                   
+
                     DTO_KhachHang emp = new DTO_KhachHang(maKH, hotenKH, diachi, dienthoai, email);
                     list.Add(emp);
                 }
@@ -54,11 +57,10 @@ namespace DAO
         public int Delete(string maKH)
         {
             Connect();
-            try
-            {
-                string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
-                int numberOfRows = ExecuteNonQuery(sql);
-                return numberOfRows;
+            try { 
+            string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
+            int numberOfRows = ExecuteNonQuery(sql);
+            return numberOfRows;
             }
             catch (SqlException ex)
             {
@@ -77,7 +79,7 @@ namespace DAO
             Connect();
             try
             {
-                string sql = "INSERT INTO KhachHang VALUES('" + maKH + "','" + hotenKH + "','" + diachi + "','" + dienthoai + "','" + email + "')";
+                string sql = "INSERT INTO KhachHang VALUES('" + maKH + "','" + hotenKH + "','" + diachi + "','" + dienthoai + "','" + email + ")";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 int numberOfRow = cmd.ExecuteNonQuery();
@@ -95,7 +97,7 @@ namespace DAO
         public int Delete1(string maKH)
         {
             data.Connect();
-            string sql = "DELETE FROM KhachHang WHERE MaKH =" + maKH;
+            string sql = "DELETE FROM KhachHang WHERE MaKH ='"+ maKH +"'";
             int numberOff = data.ExecuteNonQuery(sql);
             return numberOff;
         }
@@ -104,7 +106,7 @@ namespace DAO
             try
             {
                 data.Connect();
-                string sql = "UPDATE KhachHang set HotenKH =N'" + hotenKH + "', Diachi=N'" + diachi + "', DienThoai =N'" + dienthoai + "', Email =N'" + email + "' WHERE MaKH =" + maKH;
+                string sql = "UPDATE KhachHang set HotenKH =N'" + hotenKH + "', Diachi=N'" + diachi + "', DienThoai =N'" + dienthoai + "', Email =N'" + email + "' WHERE MaKH ='" + maKH+"'";
                 int numberRow = data.ExecuteNonQuery(sql);
                 return numberRow;
             }

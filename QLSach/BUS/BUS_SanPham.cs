@@ -30,9 +30,9 @@ namespace BUS
         {
             emp.Update(maSP, tenSP, dongia);
         }
-        public int Search(string maSP)
-        {
-            return emp.Search(maSP);
-        }
+        //public int Search(string maSP)
+        //{
+        //    return emp.Search(maSP);
+        //}
     }
 }

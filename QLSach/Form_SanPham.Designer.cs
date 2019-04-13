@@ -38,11 +38,11 @@
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.txtDongia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btSua = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             this.btXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(127, 221);
+            this.btXoa.Location = new System.Drawing.Point(123, 221);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(79, 35);
             this.btXoa.TabIndex = 2;
@@ -147,18 +147,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "BẢNG SẢN PHẨM";
             // 
-            // btSua
-            // 
-            this.btSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.Location = new System.Drawing.Point(212, 221);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(79, 35);
-            this.btSua.TabIndex = 2;
-            this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = false;
-            this.btSua.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // btTimKiem
             // 
             this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -193,6 +181,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btSua);
             this.panel2.Controls.Add(this.txtDongia);
             this.panel2.Controls.Add(this.txtTenSP);
             this.panel2.Controls.Add(this.txtMaSP);
@@ -201,13 +190,23 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btTimKiem);
             this.panel2.Controls.Add(this.btThoat);
-            this.panel2.Controls.Add(this.btSua);
             this.panel2.Controls.Add(this.btXoa);
             this.panel2.Controls.Add(this.btThem);
             this.panel2.Location = new System.Drawing.Point(464, 9);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 380);
             this.panel2.TabIndex = 7;
+            // 
+            // btSua
+            // 
+            this.btSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.Location = new System.Drawing.Point(213, 221);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(68, 35);
+            this.btSua.TabIndex = 5;
+            this.btSua.Text = "Sửa";
+            this.btSua.UseVisualStyleBackColor = false;
             // 
             // Form_SanPham
             // 
@@ -243,10 +242,10 @@
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.TextBox txtDongia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btSua;
     }
 }

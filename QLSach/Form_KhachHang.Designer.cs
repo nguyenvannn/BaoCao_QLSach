@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btThoat = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
@@ -61,29 +59,11 @@
             // 
             this.dgvKhachHang.AllowUserToAddRows = false;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Del,
-            this.Sua});
             this.dgvKhachHang.Location = new System.Drawing.Point(11, 15);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(479, 414);
             this.dgvKhachHang.TabIndex = 0;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick_1);
-            this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick_1);
-            // 
-            // Del
-            // 
-            this.Del.HeaderText = "Xóa";
-            this.Del.Name = "Del";
-            this.Del.Text = "Xóa";
-            this.Del.Width = 40;
-            // 
-            // Sua
-            // 
-            this.Sua.HeaderText = "Sửa";
-            this.Sua.Name = "Sua";
-            this.Sua.Text = "Sửa";
-            this.Sua.Width = 40;
             // 
             // panel1
             // 
@@ -104,25 +84,26 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(513, 83);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 445);
+            this.panel1.Size = new System.Drawing.Size(335, 476);
             this.panel1.TabIndex = 1;
             // 
             // btThoat
             // 
             this.btThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.Location = new System.Drawing.Point(191, 389);
+            this.btThoat.Location = new System.Drawing.Point(191, 421);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(86, 40);
             this.btThoat.TabIndex = 13;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click_1);
             // 
             // btTimKiem
             // 
             this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.Location = new System.Drawing.Point(61, 389);
+            this.btTimKiem.Location = new System.Drawing.Point(61, 422);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(101, 40);
             this.btTimKiem.TabIndex = 12;
@@ -134,7 +115,7 @@
             // 
             this.btXoaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btXoaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaKH.Location = new System.Drawing.Point(127, 337);
+            this.btXoaKH.Location = new System.Drawing.Point(127, 358);
             this.btXoaKH.Name = "btXoaKH";
             this.btXoaKH.Size = new System.Drawing.Size(79, 46);
             this.btXoaKH.TabIndex = 12;
@@ -146,7 +127,7 @@
             // 
             this.btSuaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btSuaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaKH.Location = new System.Drawing.Point(222, 337);
+            this.btSuaKH.Location = new System.Drawing.Point(222, 361);
             this.btSuaKH.Name = "btSuaKH";
             this.btSuaKH.Size = new System.Drawing.Size(79, 46);
             this.btSuaKH.TabIndex = 11;
@@ -158,7 +139,7 @@
             // 
             this.btThemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btThemKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemKH.Location = new System.Drawing.Point(29, 337);
+            this.btThemKH.Location = new System.Drawing.Point(29, 361);
             this.btThemKH.Name = "btThemKH";
             this.btThemKH.Size = new System.Drawing.Size(83, 46);
             this.btThemKH.TabIndex = 10;
@@ -196,7 +177,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(87, 283);
+            this.txtEmail.Location = new System.Drawing.Point(87, 278);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(230, 24);
             this.txtEmail.TabIndex = 6;
@@ -304,13 +285,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 540);
+            this.ClientSize = new System.Drawing.Size(860, 599);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form_KhachHang";
             this.Text = "Form_KhachHang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_KhachHang_FormClosing_1);
             this.Load += new System.EventHandler(this.Form_KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
@@ -346,7 +328,5 @@
         private System.Windows.Forms.Button btXoaKH;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.DataGridViewButtonColumn Del;
-        private System.Windows.Forms.DataGridViewButtonColumn Sua;
     }
 }

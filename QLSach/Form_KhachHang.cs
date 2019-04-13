@@ -38,58 +38,17 @@ namespace QLSach
             this.Close();
         }
 
-        private void dgvKhachHang_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            int col = e.ColumnIndex;
-            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn && dgvKhachHang.Columns[col].Name == "Del")
-            {
-                int row = e.RowIndex;
-                string maKH = dgvKhachHang.Rows[row].Cells["MaKH"].Value.ToString();
-                try
-                {
-                    int numOfRows = emp.Delete1(maKH);
-                    if (numOfRows > 0)
-                    {
-                        LoadKhachHang();
-                        MessageBox.Show("Bạn đã xóa khách hàng [" + maKH + "]");
-
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Lỗi xóa dữ liệu\n" + ex.Message);
-                }
-            }
-            if (dgvKhachHang.Columns[col] is DataGridViewButtonColumn && dgvKhachHang.Columns[col].Name == "Sua")
-            {
-                int row = e.ColumnIndex;
-                string maKH = dgvKhachHang.Rows[row].Cells["MaKH"].Value.ToString();
-                string hotenKH = dgvKhachHang.Rows[row].Cells["HotenKH"].Value.ToString();
-                string diachi = dgvKhachHang.Rows[row].Cells["Diachi"].Value.ToString();
-                string dienthoai = dgvKhachHang.Rows[row].Cells["DienThoai"].Value.ToString();
-                string email = dgvKhachHang.Rows[row].Cells["Email"].Value.ToString();
-                try
-                {
-                    emp.Update(maKH, hotenKH, diachi, dienthoai, email);
-                    LoadKhachHang();
-                    MessageBox.Show("Ban da update thanh cong!!");
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Lỗi!!" + ex.Message);
-                }
-            }
-        }
+        
 
         private void dgvKhachHang_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            txtMaKH.Text = dgvKhachHang.Rows[row].Cells[2].Value.ToString();
-            txtTenKH.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
-            txtDiaChi.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
-            txtSdt.Text = dgvKhachHang.Rows[row].Cells[5].Value.ToString();
-            txtEmail.Text = dgvKhachHang.Rows[row].Cells[6].Value.ToString();
+            txtMaKH.Text = dgvKhachHang.Rows[row].Cells[0].Value.ToString();
+            txtTenKH.Text = dgvKhachHang.Rows[row].Cells[1].Value.ToString();
+            txtDiaChi.Text = dgvKhachHang.Rows[row].Cells[2].Value.ToString();
+            txtSdt.Text = dgvKhachHang.Rows[row].Cells[3].Value.ToString();
+            txtEmail.Text = dgvKhachHang.Rows[row].Cells[4].Value.ToString();
+            
         }
 
         private void btThemKH_Click_1(object sender, EventArgs e)
@@ -101,6 +60,7 @@ namespace QLSach
                 string Diachi = txtDiaChi.Text.Trim();
                 string Dienthoai = txtSdt.Text.Trim();
                 string Email = txtEmail.Text.Trim();
+               
 
                 emp.Insert(MaKH, HotenKH, Diachi, Dienthoai, Email);
                 LoadKhachHang();
@@ -137,6 +97,7 @@ namespace QLSach
                 string diachi = txtDiaChi.Text.Trim();
                 string dienthoai = txtSdt.Text.Trim();
                 string email = txtEmail.Text.Trim();
+               
 
                 emp.Update(maKH, hotenKH, diachi, dienthoai, email);
                 LoadKhachHang();
@@ -145,7 +106,7 @@ namespace QLSach
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Hãy nhập tất cả dữ liệu " + ex);
+                MessageBox.Show("Loi!!" + ex.Message);
             }
         }
 
@@ -159,6 +120,11 @@ namespace QLSach
         {
             string sql = "SELECT *FROM KhachHang WHERE MaKH Like'" + txtMaKH.Text + "%'";
             dgvKhachHang.DataSource = emp.GetData(sql);
+        }
+
+        private void btThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

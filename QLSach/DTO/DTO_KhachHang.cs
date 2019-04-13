@@ -13,6 +13,7 @@ namespace DTO
         public string Diachi { get; set; }
         public string DienThoai { get; set; }
         public string Email { get; set; }
+  
         public DTO_KhachHang (string maKH, string hotenKH, string diachi, string dienThoai, string email)
         {
             
@@ -21,7 +22,7 @@ namespace DTO
             this.Diachi = diachi;
             this.DienThoai = dienThoai;
             this.Email = email;
-
+            
         }
     }
 }

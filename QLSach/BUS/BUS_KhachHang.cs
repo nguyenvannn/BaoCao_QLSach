@@ -16,8 +16,12 @@ namespace BUS
         {
            
                 return emp.GetData(sql);
-               // return (new DAO_Khachhang().GetData());
+          
             
+        }
+        public int Delete(string maKH)
+        {
+            return emp.Delete(maKH);
         }
         public int Insert(string maKH, string hotenKH, string diachi, string sdt, string email)
         {

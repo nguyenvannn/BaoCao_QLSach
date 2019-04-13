@@ -36,8 +36,6 @@ C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.csproj.Gener
 C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.exe
 C:\Users\Van Nguyen\Documents\GiuaKiKiemThu\QLSach\obj\Debug\QLSach.pdb
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QLSach.exe.config
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
-C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QLSach.exe
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\bin\Debug\QLSach.pdb
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.csprojResolveAssemblyReference.cache
@@ -46,3 +44,5 @@ C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Form_KhachHang
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Form_SanPham.resources
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Properties.Resources.resources
 C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
+C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb

@@ -50,18 +50,12 @@ namespace DAO
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 return cmd.ExecuteReader();
             }
-            //catch (InvalidCastException ex)
-            //{
-            //    throw ex;
-            //}
+            
             catch (SqlException ex)
             {
                 throw ex;
             }
-            //catch (InvalidOperationException ex)
-            //{
-            //    throw ex;
-            //}
+         
         }
         public int ExecuteNonQuery(string sql)
         {
