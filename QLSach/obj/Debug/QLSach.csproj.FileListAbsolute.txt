@@ -49,3 +49,14 @@ C:\Users\Van Nguyen\Desktop\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
 C:\Users\lanan\BaoCao_QLSach\bin\Debug\QLSach.exe.config
 C:\Users\lanan\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
 C:\Users\lanan\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\bin\Debug\QLSach.exe.config
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.exe
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.pdb
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\bin\Debug\QLSach.exe
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\bin\Debug\QLSach.pdb
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.csprojResolveAssemblyReference.cache
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Form_DangNhap.resources
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Form_KhachHang.resources
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Form_SanPham.resources
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.Properties.Resources.resources
+C:\Users\lanan\OneDrive\Máy tính\BaoCao_QLSach\QLSach\obj\Debug\QLSach.csproj.GenerateResource.Cache
