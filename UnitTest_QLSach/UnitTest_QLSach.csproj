@@ -50,8 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest_KH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLSach\DAO\DAO.csproj">
+      <Project>{02282f83-317b-4aa8-8c70-fc1b71bde08c}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLSach\DTO\DTO.csproj">
+      <Project>{e841faf5-517b-483e-9f29-3331ece9d68b}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
