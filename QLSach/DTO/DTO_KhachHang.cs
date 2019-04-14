@@ -13,16 +13,16 @@ namespace DTO
         public string Diachi { get; set; }
         public string DienThoai { get; set; }
         public string Email { get; set; }
-  
-        public DTO_KhachHang (string maKH, string hotenKH, string diachi, string dienThoai, string email)
+
+        public DTO_KhachHang(string MaKH, string hotenKH, string diachi, string dienThoai, string email)
         {
-            
-            this.MaKH = maKH;
+
+            this.MaKH = MaKH;
             this.HotenKH = hotenKH;
             this.Diachi = diachi;
             this.DienThoai = dienThoai;
             this.Email = email;
-            
+
         }
     }
 }
